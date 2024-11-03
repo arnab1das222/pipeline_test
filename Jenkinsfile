@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'terraform init'
                 script {
-                    sh 'terraform init'
+                    terraform init
                 }
             }
         }
@@ -14,7 +14,7 @@ pipeline {
             steps {
                 echo 'terraform fmt'
                 script {
-                    sh 'terraform fmt'
+                    terraform fmt
                 }
             }
         }
@@ -22,7 +22,7 @@ pipeline {
             steps {
                 echo 'terraform validate'
                 script {
-                    sh 'terraform validate'
+                    terraform validate
                 }
             }
         }
@@ -30,7 +30,7 @@ pipeline {
             steps {
                 echo 'terraform plan'
                 script {
-                    sh 'terraform plan'
+                   terraform plan
                 }
             }
         }
@@ -38,7 +38,7 @@ pipeline {
             steps {
                 echo 'terraform apply'
                 script {
-                    sh 'terraform apply'
+                    terraform apply
                 }
             }
         }
