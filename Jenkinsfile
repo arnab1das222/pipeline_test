@@ -5,31 +5,31 @@ pipeline {
         stage('init') {
             steps {
                 echo 'terraform init'
-                terraform init
+                sh 'terraform init'
             }
         }
         stage('fmt') {
             steps {
                 echo 'terraform fmt'
-                terraform init
+                sh 'terraform init'
             }
         }
         stage('validate') {
             steps {
                 echo 'terraform validate'
-                terraform validate
+                sh 'terraform validate'
             }
         }
         stage('plan') {
             steps {
                 echo 'terraform plan'
-                terraform plan
+                sh 'terraform plan'
             }
         }
         stage('apply') {
             steps {
                 echo 'terraform apply'
-                terraform apply
+                sh 'terraform apply'
             }
         }
     }
